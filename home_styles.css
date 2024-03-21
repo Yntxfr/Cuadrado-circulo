@@ -18,3 +18,155 @@ html {
 }
 
 /* --------------------------------------------- */
+/* Header bar styles */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f3f5f8;
+    padding: 20px 10%;
+    border-block-end: 1.8px solid rgba(15, 33, 69, 0.1)
+}
+
+.logo {
+    font-family: 'Brown', sans-serif;
+    font-size: larger;
+    margin-right: auto;
+    color: #0f2145;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+.logo:hover {
+    color: #3e31fa;
+    transform: scale(1.1);
+}
+
+
+/* Menu icons */
+header ul {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    list-style: none;
+}
+
+.menu a {
+    color: #0f2145;
+    text-decoration: none;
+}
+
+.menu i {
+    font-size: 18px;
+}
+  
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+  
+.menu a span {
+    transition: transform 0.2s ease-out;
+}
+  
+.menu a span:first-child {
+    display: inline-block;
+    padding: 5px 30px;
+}
+  
+.menu a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+  
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+  
+.menu a:hover span:last-child, .menu[data-animation] a:hover span:last-child {
+    transform: none;
+}
+  
+/* Animations */
+.menu[data-animation="to-top"] a span:last-child {
+    transform: translateY(100%);
+}
+  
+.menu[data-animation="to-top"] a:hover span:first-child {
+    transform: translateY(-100%);
+}
+
+
+/* --------------------------------------------- */
+/* Square > Circle styles */
+.frame {
+    padding: 90px 10%;
+    display: flex;
+}
+/*
+.element {
+    width: 100px;
+    height: 100px;
+    background: #3e31fa;
+    position: relative;
+    animation: square-move 6s infinite ease-in-out;
+    
+    animation-name
+    animation-duration
+    animation-timing-function
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    
+}
+
+@keyframes square-move {
+    0%   {top: 0px; left: 0px; background: red;}
+    25%  {top: 0px; left: 100px; background: blue;}
+    50%  {top: 100px; left: 100px; background: yellow;}
+    75%  {top: 100px; left: 0px; background: green;}
+    100% {top: 0px; left: 0px; background: red;}
+}    
+*/
+
+.transformer {
+    width: 120px;
+    height: 120px;
+    background: #0f2145;
+    position: relative;
+    animation: horizontal-move 6s infinite ease-in-out;
+    /*
+    animation-name
+    animation-duration
+    animation-timing-function
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    */
+}
+
+.transformer img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes horizontal-move {
+    0%   {top: 0px; left: 0px; background: yellow; transform: rotate(720deg);}
+    70%  {top: 0px; left: 400px; background: #0f2145; border-radius: 50%; width: 320px; height: 320px; transform: rotate(-1080deg);}
+    100% {top: 0px; left: 90%; background: orange; width: 80px; height: 80px;}
+}
