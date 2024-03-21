@@ -1,0 +1,20 @@
+/* Cards estilos CSS */
+
+/* Paleta de colores:
+    -#3e31fa
+    -#0f2145
+    -#f3f5f8
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #ffffff;
+
+}
+
+/* --------------------------------------------- */
